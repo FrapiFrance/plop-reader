@@ -292,7 +292,7 @@ void WallabagApi::loadRecentArticles(EntryRepository repository, EpubDownloadQue
 				}
 
 				// For now, thumbnail is only downloaded when the entry is fetched from the server for the first time
-				downloadImage(repository, entry);
+				// downloadImage(repository, entry);
 			}
 
 			if (i >= nextIncrement) {
