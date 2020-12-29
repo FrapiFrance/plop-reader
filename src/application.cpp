@@ -177,11 +177,11 @@ void Application::keypressEvent(int key)
 	int countEntries = countEntriesForCurrentMode();
 	int numberOfPages = ceil((float)countEntries / (float)numPerPage);
 
-	if (key == KEY_PREV && pageNum > 1) {
+	if (key == IV_KEY_PREV && pageNum > 1) {
 		pageNum -= 1;
 	}
 
-	if (key == KEY_NEXT && pageNum < numberOfPages) {
+	if (key == IV_KEY_NEXT && pageNum < numberOfPages) {
 		pageNum += 1;
 	}
 
