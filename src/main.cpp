@@ -8,7 +8,6 @@ int global_lang = LANG_EN;
 static int main_handler(int event_type, int param_one, int param_two)
 {
 	int result = 0;
-	iv_mtinfo *touch_info;
 
 	switch (event_type) {
 	case EVT_INIT:
@@ -42,28 +41,15 @@ static int main_handler(int event_type, int param_one, int param_two)
 		result = 1;
 		break;
 	case EVT_POINTERDOWN:
-		touch_info = GetTouchInfo();
-		app.touchStartEvent(touch_info->x, touch_info->y);
+		app.touchStartEvent(param_one, param_two);
 		result = 1;
 		break;
 	case EVT_POINTERUP:
-		touch_info = GetTouchInfo();
-		app.touchEndEvent(touch_info->x, touch_info->y);
-		result = 1;
-		break;
-	case EVT_POINTERMOVE:
-		touch_info = GetTouchInfo();
-		if (touch_info->active) {
-			app.touchStartEvent(touch_info->x, touch_info->y);
-		}
-		else {
-			app.touchEndEvent(touch_info->x, touch_info->y);
-		}
+		app.touchEndEvent(param_one, param_two);
 		result = 1;
 		break;
 	case EVT_POINTERLONG:
-		touch_info = GetTouchInfo();
-		app.touchLong(touch_info->x, touch_info->y);
+		app.touchLong(param_one, param_two);
 		result = 1;
 		break;
 	case EVT_EXIT:
