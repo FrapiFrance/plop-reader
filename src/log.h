@@ -30,7 +30,7 @@ public:
 
 private:
 	const char *DIR = FLASHDIR;
-	const char *FILEPATH = FLASHDIR "/plop-reader-logs.html";
+	const char *FILEPATH = FLASHDIR "/plop-reader-logs.log";
 
 	Log() {};
 	~Log() {};
