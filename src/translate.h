@@ -89,8 +89,8 @@ extern int global_lang;
 )
 
 #define LBL_ABOUT_CONTRIBUTE (IS_LANG_FR \
-	? "Contribuer (GPL-3.0) :" \
-	: "Contribute (GPL-3.0):" \
+	? "Patché par Sven Möller cf. https://github.com/pmartin/plop-reader/issues/107#issuecomment-752112237, compilé par Frapi\n" \
+	: "Patched by Sven Möller cf. https://github.com/pmartin/plop-reader/issues/107#issuecomment-752112237, compiled by Frapi\n" \
 )
 
 #define LBL_STATUSBAR_FEEL_FREE_TO_CONTRIBUTE (IS_LANG_FR \
